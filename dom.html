@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dom</title>
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li>java</li>
+        <li>python</li>
+        <li>c</li>
+        <li>cpp</li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    function addlanguage(language) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(language));
+      document.querySelector(".container ul").appendChild(li);
+    }
+    addlanguage("javascript");
+    addlanguage("wasif");
+    // edit
+    const editlang = document.querySelector("li:first-child");
+    const newli = document.createElement("li");
+    newli.textContent = "eng";
+    editlang.replaceWith(newli);
+    // remove
+
+    function removeFirstAndLastChild() {
+      const ul = document.querySelector(".container ul");
+      if (ul.firstword) {
+        ul.firstElementChild.remove();
+      }
+      if (ul.lastword) {
+        ul.lastElementChild.remove();
+      }
+  </script>
+</html>
